@@ -1,6 +1,6 @@
 const UserView = require("./../../app/views/UserView")
 
-decribe("Test for UserViews", () => {
+describe("Test for UserViews", () => {
     test("Return an error object when try to create a new user with a null payload", () => {
         const payload = null
         const result = UserView.createUser(payload)
