@@ -6,16 +6,25 @@ class UserService{
     }
 
     static getInfo(user){
-        const list = []
-        list[0] = user.getId()
-        list[1] = user.getUsername()
-        list[2] = user.getName()
-        list[3] = user.getBio()
+        const list = [
+            user.getId(),
+            user.getUsername(),
+            user.getName(),
+            user.getBio()
+        ]
         return list
     }
 
     static updateUserUsername(user, newUserName){
         user.setUsername(newUserName)
+    }
+
+    static getAllUsernames(listUsers){
+        const list = []
+        listUsers.forEach(user => {
+            list.push(user.getUsername())
+        });
+        return list
     }
 }
 
